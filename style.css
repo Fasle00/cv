@@ -3,7 +3,7 @@
   --dark: rgb(53, 53, 53);
   --color-bg: var(--light);
   --color-fg: var(--dark);
-  --color-primary-light: rgb(32, 252, 3);
+  --color-primary-light: rgb(90, 3, 252);
 }
 
 .content {
@@ -51,6 +51,7 @@ body {
 }
 
 ul[role="list"] {
+  padding-left: 0;
   list-style: none;
 }
 
@@ -66,6 +67,7 @@ svg {
 
 .inner-navbar {
   display: flex;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -84,8 +86,4 @@ svg {
 
 .region {
   padding-block: 3rem;
-}
-
-.primary-footer ul {
-  padding: 0;
 }

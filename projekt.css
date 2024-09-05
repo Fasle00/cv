@@ -1,0 +1,27 @@
+.projekt > ul {
+    --breakpoint: 280px;
+    
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, 
+        minmax(min(var(--breakpoint),100%), 1fr));
+}
+
+.projekt img {
+    aspect-ratio: 1;
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.projekt .technologies {
+    display: flex;
+    gap: 1rem;
+}
+
+.projekt > ul > li {
+    background-color: var(--color-primary-light);
+    color: var(--color-bg);
+    padding: 1rem;
+    border-radius: 1rem
+}
+
