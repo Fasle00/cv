@@ -1,0 +1,91 @@
+:root {
+  --light: rgb(220, 255, 238);
+  --dark: rgb(53, 53, 53);
+  --color-bg: var(--light);
+  --color-fg: var(--dark);
+  --color-primary-light: rgb(32, 252, 3);
+}
+
+.content {
+  --gap: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --content: min(90ch, 100% - var(--gap) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--full) 
+    [feature-start] var(--feature) 
+    [popout-start] var(--popout) 
+    [content-start] var(--content) [content-end] 
+    var(--popout) [popout-end] 
+    var(--feature) [feature-end] 
+    var(--full) [full-end];
+}
+
+.content>* {
+  grid-column: content;
+}
+
+.popout {
+  grid-column: popout;
+}
+
+.feature {
+  grid-column: feature;
+}
+
+.full {
+  grid-column: full;
+}
+
+.center {
+  justify-self: center;
+}
+
+body {
+  margin: 0;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+svg {
+  width: auto;
+  height: 2ex;
+}
+
+.primary-header {
+  background-color: var(--color-primary-light);
+  color: var(--color-bg)
+}
+
+.inner-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.inner-navbar > ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.inner-navbar a, .inner-navbar a:visited{
+  color: var(--color-bg);
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.region {
+  padding-block: 3rem;
+}
+
+.primary-footer ul {
+  padding: 0;
+}
